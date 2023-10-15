@@ -61,7 +61,9 @@ printMessage();
 let c = 5;
 let d = 10;
 
-function secondFunction() {}
+function secondFunction(c =5,d=10) {
+return c + d;
+}
 
 console.log(secondFunction()); //Выведет 15
 //Обратите ваше внимание, что мы можем передать в функцию любые аргументы и secondFunction подставит их на место параметров соответственно, перемножит их и вернёт результат.
@@ -72,7 +74,10 @@ console.log(secondFunction(2, 3)); //Выведет 5
 let f = 2;
 let g = 3;
 
-function thirdFunction(f = 2, g = 3) {}
+function thirdFunction(f = 2, g = 3) {
+	g = typeof g !== "undefined" ? g : f;
+	return f*g;
+}
 
 console.log(thirdFunction()); //Выведет 6
 //Обратите ваше внимание, что мы можем передать в функцию любые аргументы и thirdFunction подставит их на место параметров соответственно (если пармаметр не задан, то он подставится по умлочанию), перемножит их и вернёт результат.
