@@ -2,17 +2,18 @@
 // Напишите функцию firstFunction, которая при нажатии кнопки выводит в консоль переменную first.
 let first = 8;
 
-function firstFunction() {}
-
-console.log(firstFunction());
+function firstFunction() {
+	console.log(first);
+}
 
 //Задание 2
 // Напишите функцию sum, которая принимает два параметра a и b, складывает их и выводит в консоль результат.
 let a = 5;
 let b = 3;
 
-function sum(a, b) {}
-
+function sum(a, b) {
+	return a+b;
+}
 console.log(sum(a, b));
 
 //Задание 3
@@ -20,7 +21,9 @@ console.log(sum(a, b));
 let x = 4;
 let y = 2;
 
-function multiply(x, y) {}
+function multiply(x, y) {
+	return x*y;
+}
 
 console.log(multiply(x, y));
 
@@ -28,7 +31,9 @@ console.log(multiply(x, y));
 // Напишите функцию greet, которая принимает один параметр name и выводит в консоль приветствие с этим именем.
 let firstName = 'Alice';
 
-function greet(firstName) {}
+function greet(firstName) {
+	console.log(firstName);
+}
 
 greet(firstName);
 
@@ -37,12 +42,19 @@ greet(firstName);
 let width = 6;
 let height = 4;
 
-function calculateArea(width, height) {}
+function calculateArea(width, height) {
+	return 6*4;
+}
 
 console.log(calculateArea(width, height));
 
 //Задание 6
 // Напишите функцию printMessage(), которая принимает один параметр message и выводит его в консоль. Если параметр не передан, используйте значение по умолчанию: "Сообщение отсутствует".
+
+function printMessage(message = "Сообщение отсутствует"){
+	console.log(message);
+}
+printMessage();
 
 //Задание 7
 // Напишите функцию secondFunction, которая принимает два параметра: c и d, и выводит в консоль их сумму. Если значения параметров не переданы, используйте значения по умолчанию: c = 5 и d = 10.
@@ -74,6 +86,9 @@ console.log(thirdFunction(5, 6)); //Выведет 30
 // Создайте функцию calculateDifference с помощью Function Expression и правильно используйте её, чтобы вычесть два числа и вывести результат в консоль.
 // Ваш код
 
+const calculateDifference = function(a,b){
+	return a-b;
+};
 const result = calculateDifference(5, 3);
 
 console.log(result); //Выведет 2
@@ -121,3 +136,4 @@ function calculateAge() {}
 
 //Задание 18
 // Напишите функцию, которая должна возводить число в заданную степень. Результат должен выводить в консоль в формате: console.log("Результат: " + result);
+
