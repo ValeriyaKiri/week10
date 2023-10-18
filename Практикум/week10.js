@@ -3,18 +3,19 @@
 let first = 8;
 
 function firstFunction() {
-	console.log(first);
+	return first;
 }
-
+console.log(firstFunction());
 //Задание 2
 // Напишите функцию sum, которая принимает два параметра a и b, складывает их и выводит в консоль результат.
 let a = 5;
 let b = 3;
 
 function sum(a, b) {
-	return a+b;
-}
-console.log(sum(a, b));
+	const result = a + b;
+	return result;
+	}
+	console.log(sum(a, b));
 
 //Задание 3
 // Напишите функцию multiply, которая принимает два параметра x и y, перемножает их и выводит в консоль результат.
@@ -22,7 +23,8 @@ let x = 4;
 let y = 2;
 
 function multiply(x, y) {
-	return x*y;
+	const result = x * y;
+	return result;
 }
 
 console.log(multiply(x, y));
@@ -32,9 +34,8 @@ console.log(multiply(x, y));
 let firstName = 'Alice';
 
 function greet(firstName) {
-	console.log(firstName);
+	console.log("Привет, " + firstName + "!");
 }
-
 greet(firstName);
 
 //Задание 5
@@ -43,7 +44,8 @@ let width = 6;
 let height = 4;
 
 function calculateArea(width, height) {
-	return 6*4;
+	const area = width * height;
+	return area;
 }
 
 console.log(calculateArea(width, height));
@@ -61,11 +63,13 @@ printMessage();
 let c = 5;
 let d = 10;
 
-function secondFunction(c =5,d=10) {
-return c + d;
+function secondFunction(c, d) {
+	const sum = c + d;
+	return sum;
 }
 
-console.log(secondFunction()); //Выведет 15
+console.log(secondFunction());
+ //Выведет 15
 //Обратите ваше внимание, что мы можем передать в функцию любые аргументы и secondFunction подставит их на место параметров соответственно, перемножит их и вернёт результат.
 console.log(secondFunction(2, 3)); //Выведет 5
 
